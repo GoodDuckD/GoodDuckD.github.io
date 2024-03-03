@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+        background-color: lightblue;
+        margin: 0;
+
+      }
+
+    html {
+      --color-primary: #333;
+      --color-secondary: #666;
+    }
+
+    .tab-content {
+      padding: 10px;
+      display: none;
+      background: #fff;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .tab-content img {
+      width: 105px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    /* Style the title attribute text */
+    .tab-content img:hover::after {
+      content: attr(title);
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+  <body>
+    <button id="home-btn">Home</button>
+    <button id="other-btn">Games</button>
+    <div id="home-content" class="tab-content active">
+      <h1>Bienvenido a Duck´s</h1>
+      <p>Este es el contenido de la página de inicio.</p>
+    </div>
+    <div id="other-content" class="tab-content">
+      <h1>Este es nuestro catalogo de juegos</h1>
+      <p>Este es el contenido de la otra página.</p>
+      <!-- Add title attributes to the images -->
+      <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
+        <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Game 1" title="Game 1 - 12gb">
+      </a>
+      <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
+        <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Game 2" title="Game 2 - 12gb">
+      </a>
+    <script>
+      const homeBtn = document.getElementById("home-btn");
+      const otherBtn = document.getElementById("other-btn");
+      const homeContent = document.getElementById("home-content");
+      const otherContent = document.getElementById("other-content");
+
+homeBtn.addEventListener("click", () => {
+console.log("Botón Home presionado");
+homeContent.classList.add("active");
+otherContent.classList.remove("active");
+});
+
+otherBtn.addEventListener("click", () => {
+console.log("Botón Otro presionado");
+homeContent.classList.remove("active");
+otherContent.classList.add("active");
+});
+</script>
+  </body>
+</html>
