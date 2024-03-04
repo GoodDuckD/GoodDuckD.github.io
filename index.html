@@ -18,10 +18,23 @@
       background: #fff;
     }
 
+    .tab-games-lists {
+      padding: 10px;
+      display: none;
+      background: #fff;
+    }
     .active {
       display: block;
     }
+    #search-input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
+#search-btn {
+  padding: 10px;
+}
     h1 {
       margin-top: 0;
     }
@@ -43,38 +56,92 @@
   </style>
   <body>
     <button id="home-btn">Home</button>
-    <button id="other-btn">Games</button>
+    <button id="other-btn">Games PC</button>
+    <button id="games-btn">Games Phone</button>
     <div id="home-content" class="tab-content active">
-      <h1>Bienvenido a Duck´s</h1>
+      <h1>Bienvenido a Ducks</h1>
       <p>Este es el contenido de la página de inicio.</p>
+    </div>
+
+    <div id="games-list" class="tab-games-lists">
+      <h1>Este es nuestro catalogo de juegos</h1>
     </div>
     <div id="other-content" class="tab-content">
       <h1>Este es nuestro catalogo de juegos</h1>
       <p>Este es el contenido de la otra página.</p>
-      <!-- Add title attributes to the images -->
-      <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
-        <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Game 1" title="Game 1 - 12gb">
+      <input type="text" id="search-input" placeholder="Buscar juego...">
+      <button id="search-btn">Buscar</button>
+      <div class="Hotline Miami">
+        <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
+          <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Hotline Miami" title="Hotline Miami - 185 MB">
+        </a>
+      <a href="https://www.mediafire.com/file/0ni2ukj7zwj9f6g/The_escapist.rar/file">
+        <img src="https://www.team17.com/wp-content/uploads/2020/08/The-escapist-Tile.jpg" alt="The escapist" title="The escapist - 75Mb">
       </a>
-      <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
-        <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Game 2" title="Game 2 - 12gb">
+      <a href="https://www.mediafire.com/file/mfz20z8for3sskv/Slime.Rancher.v1.1.0b.rar">
+        <img src="https://imgs.search.brave.com/iP2xACcYVNd3yv07FfmDMq7s5eX2O1QNi-CkS1Rwx-w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5hcGkucGxheXN0/YXRpb24uY29tL3Z1/bGNhbi9pbWcvY2Zu/LzExMzA3TlVsUlBj/eENneml6dTZncEZa/aVJfV0lxWUhWOVcw/RzhvYkJuMEoxcUNY/WS1TamJrektpaFZO/QTNXelVRSGJEMDh6/V1ZhTi1hN1U1LS10/NTdsYy1nY2trUTBm/LS5wbmc" alt="Slime Rancher" title="Slime Rancher - 785 MB">
       </a>
+      <a href="https://www.mediafire.com/file/s9gwcdmr2bnxesn/M0t0GP_2000.rar/file">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/MotoGP_URT.jpg" alt="Moto GP" title="Moto 2000 - 200 Mb">
+      </a>
+      <a href="https://www.mediafire.com/file/4936ayhq433cekl/Resident_Evil_1.rar/file">
+        <img src="https://assets-prd.ignimgs.com/2021/12/06/resident-evil-remake-1638825215619.jpg" alt="Resident Evil 1" title="Resident Evil 1 - 125 mb">
+      </a>
+      <a href="https://www.mediafire.com/file/cjnq03bpt3lcqbl">
+        <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/17d8cfb86e6f1507ddc481fa370bae11.jpg" alt="Zed Zone" title="Zed Zone - 410 mb">
+      </a>
+      <a href="https://www.mediafire.com/file/sztzwdkp7mndyry/The_Long_DriveBy_GAMER_YT.zip/file">
+        <img src="https://longdrivefree.com/images/uploads/2022-12-14/icon-gami5.png" alt="The Long Drive" title="The Long Drive - 345 Mb">
+      </a>
+    </div> 
     <script>
       const homeBtn = document.getElementById("home-btn");
+      const gamesbtn = document.getElementById("games-btn");
       const otherBtn = document.getElementById("other-btn");
       const homeContent = document.getElementById("home-content");
+      const gameslist = document.getElementById("games-list");
       const otherContent = document.getElementById("other-content");
 
 homeBtn.addEventListener("click", () => {
 console.log("Botón Home presionado");
 homeContent.classList.add("active");
+gameslist.classList.remove("active");
 otherContent.classList.remove("active");
 });
 
 otherBtn.addEventListener("click", () => {
 console.log("Botón Otro presionado");
 homeContent.classList.remove("active");
+gameslist.classList.remove("active");
 otherContent.classList.add("active");
+});
+
+gamesbtn.addEventListener("click", () => {
+console.log("Botón Otro presionado");
+homeContent.classList.remove("active");
+gameslist.classList.add("active");
+otherContent.classList.remove("active");
+});
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const gameListItems = document.getElementsByClassName("game-item");
+
+searchBtn.addEventListener("click", () => {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+
+  // Loop through all the game list items and hide/show them based on the search term
+  for (let i = 0; i < gameListItems.length; i++) {
+    const gameItem = gameListItems[i];
+    const gameTitle = gameItem.getElementsByTagName("h3")[0].innerText.toLowerCase();
+
+    if (gameTitle.includes(searchTerm)) {
+      gameItem.style.display = "block";
+    } else {
+      gameItem.style.display = "none";
+    }
+  }
 });
 </script>
   </body>
 </html>
+
