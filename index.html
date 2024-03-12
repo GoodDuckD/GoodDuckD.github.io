@@ -2,10 +2,9 @@
 <html>
   <style>
     body {
-        background-color: lightblue;
-        margin: 0;
-
-      }
+      background-color: lightblue;
+      margin: 0;
+    }
 
     html {
       --color-primary: #333;
@@ -23,20 +22,44 @@
       display: none;
       background: #fff;
     }
+
+    .info-content {
+      display: none; /* Oculta el contenido de información por defecto */
+    }
+
     .active {
       display: block;
     }
-    #search-input {
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
 
-#search-btn {
-  padding: 10px;
-}
+    #search-input {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #search-btn {
+      padding: 10px;
+    }
+
     h1 {
       margin-top: 0;
+    }
+
+    #latest-news {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #latest-news a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #latest-news a:hover {
+      text-decoration: underline;
     }
 
     .tab-content img {
@@ -45,7 +68,6 @@
       object-fit: cover;
     }
 
-    /* Style the title attribute text */
     .tab-content img:hover::after {
       content: attr(title);
       display: block;
@@ -53,95 +75,165 @@
       font-size: 12px;
       color: gray;
     }
+    .game-container {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .game-text {
+    font-size: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   </style>
   <body>
     <button id="home-btn">Home</button>
     <button id="other-btn">Games PC</button>
     <button id="games-btn">Games Phone</button>
+    <button id="info-btn">Informacion</button>
     <div id="home-content" class="tab-content active">
-      <h1>Bienvenido a Ducks</h1>
+      <h1>Bienvenido a Ducks Games</h1>
       <p>Este es el contenido de la página de inicio.</p>
+      <div id="latest-news">
+        <p>4/3/24 | <a href="https://www.team17.com/wp-content/uploads/2020/08/The-escapist-Tile.jpg">Add Game Title (PC)</a></p>
+        <img src="https://www.team17.com/wp-content/uploads/2020/08/The-escapist-Tile.jpg" width="107" height="150" alt="Description of the image">
+      </div>
     </div>
 
     <div id="games-list" class="tab-games-lists">
-      <h1>Este es nuestro catalogo de juegos</h1>
+      <h1>Este es nuestro catálogo de juegos para teléfonos</h1>
+    
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/h1pn4n5x17ppkze/Solar+Smash+Mod+v2.3.3+-+espacioapk.com.apk/file">
+          <img src="https://play-lh.googleusercontent.com/9oKsgghjeohO1ztpmG6SrIMAVLn8sAhwsRGKHuOaqfMghYWiFHJ1osjwf_fAaMQZA5Y" title="Solar Smash - 129Mb" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Solar Smash (129Mb)</p>
+        </a>
+      </div>
+    
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/5zroaituwu7lwp8/Subway+Surfers+Mod+v3.24.2+-+espacioapk.com.apk/file">
+          <img src="https://espacioapk.com/wp-content/uploads/2024/02/subway-surfers-mod-apk.webp" title="Subway Surfers Mod - 162Mb" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Subway Surfers Mod (162Mb)</p>
+        </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/folder/pglqamh8x20up/pvz_2">
+          <img src="https://www3.minijuegosgratis.com/v3/games/thumbnails/201764_7_sq.jpg" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Planta vs zombies 2 Mod (800 MB)</p>
+        </a>
+      </div>
     </div>
+    <div id="info-list" class="info-content">
+      <h1>Informacion</h1>
+
+      <a href="https://discord.gg/86m5JTJGsq">
+        <p>Discord</p>
+      </a>
+        <p>Entra a nuestro discord para recibir anuncios/informacion sobre la pagina</p>
+
+        <a href="https://twitter.com/DuckDDev_">
+          <p>Twitter</p>
+        </a>
+
+        <p>Apoya al desarrollador siguiéndolo en Twitter</p>
+  
+    </div>
+
     <div id="other-content" class="tab-content">
       <h1>Este es nuestro catalogo de juegos</h1>
       <p>Este es el contenido de la otra página.</p>
-      <input type="text" id="search-input" placeholder="Buscar juego...">
-      <button id="search-btn">Buscar</button>
-      <div class="Hotline Miami">
+      <div class="game-container">
         <a href="https://www.mediafire.com/file/e13dmb4zbnwb3pt/Hotline_Miami_Daelanification.rar/file">
-          <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" alt="Hotline Miami" title="Hotline Miami - 185 MB">
+          <img src="https://imgs.search.brave.com/9RY_EvJUlW8ev7ksOKkiRns9crjb_Z2IiTioPm-H_HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllXTXlPREpp/TnpVdFpqSTFOQzAw/WVROaExXRTRPVFV0/WkRjM1lqUTVOVFU1/TW1NMlhrRXlYa0Zx/Y0dkZVFYVnlNVGcy/Tnpnek1ERUAuanBn" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Hotline Miami (185 MB)</p>
         </a>
-      <a href="https://www.mediafire.com/file/0ni2ukj7zwj9f6g/The_escapist.rar/file">
-        <img src="https://www.team17.com/wp-content/uploads/2020/08/The-escapist-Tile.jpg" alt="The escapist" title="The escapist - 75Mb">
-      </a>
-      <a href="https://www.mediafire.com/file/mfz20z8for3sskv/Slime.Rancher.v1.1.0b.rar">
-        <img src="https://imgs.search.brave.com/iP2xACcYVNd3yv07FfmDMq7s5eX2O1QNi-CkS1Rwx-w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5hcGkucGxheXN0/YXRpb24uY29tL3Z1/bGNhbi9pbWcvY2Zu/LzExMzA3TlVsUlBj/eENneml6dTZncEZa/aVJfV0lxWUhWOVcw/RzhvYkJuMEoxcUNY/WS1TamJrektpaFZO/QTNXelVRSGJEMDh6/V1ZhTi1hN1U1LS10/NTdsYy1nY2trUTBm/LS5wbmc" alt="Slime Rancher" title="Slime Rancher - 785 MB">
-      </a>
-      <a href="https://www.mediafire.com/file/s9gwcdmr2bnxesn/M0t0GP_2000.rar/file">
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/MotoGP_URT.jpg" alt="Moto GP" title="Moto 2000 - 200 Mb">
-      </a>
-      <a href="https://www.mediafire.com/file/4936ayhq433cekl/Resident_Evil_1.rar/file">
-        <img src="https://assets-prd.ignimgs.com/2021/12/06/resident-evil-remake-1638825215619.jpg" alt="Resident Evil 1" title="Resident Evil 1 - 125 mb">
-      </a>
-      <a href="https://www.mediafire.com/file/cjnq03bpt3lcqbl">
-        <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/17d8cfb86e6f1507ddc481fa370bae11.jpg" alt="Zed Zone" title="Zed Zone - 410 mb">
-      </a>
-      <a href="https://www.mediafire.com/file/sztzwdkp7mndyry/The_Long_DriveBy_GAMER_YT.zip/file">
-        <img src="https://longdrivefree.com/images/uploads/2022-12-14/icon-gami5.png" alt="The Long Drive" title="The Long Drive - 345 Mb">
-      </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/0ni2ukj7zwj9f6g/The_escapist.rar/file">
+          <img src="https://www.team17.com/wp-content/uploads/2020/08/The-escapist-Tile.jpg" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">The escapist (75Mb)</p>
+        </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/mfz20z8for3sskv/Slime.Rancher.v1.1.0b.rar">
+          <img src="https://imgs.search.brave.com/iP2xACcYVNd3yv07FfmDMq7s5eX2O1QNi-CkS1Rwx-w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5hcGkucGxheXN0/YXRpb24uY29tL3Z1/bGNhbi9pbWcvY2Zu/LzExMzA3TlVsUlBj/eENneml6dTZncEZa/aVJfV0lxWUhWOVcw/RzhvYkJuMEoxcUNY/WS1TamJrektpaFZO/QTNXelVRSGJEMDh6/V1ZhTi1hN1U1LS10/NTdsYy1nY2trUTBm/LS5wbmc" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Slime Rancher (785 MB)</p>
+        </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/s9gwcdmr2bnxesn/M0t0GP_2000.rar/file">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/MotoGP_URT.jpg" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Moto 2000 (200 Mb)</p>
+        </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/4936ayhq433cekl/Resident_Evil_1.rar/file">
+          <img src="https://assets-prd.ignimgs.com/2021/12/06/resident-evil-remake-1638825215619.jpg" style="width: 105px; height: 150px; object-fit: cover;">
+          <p class="game-text">Resident Evil 1 (125 mb)</p>
+        </a>
+      </div>
+      <div class="game-container">
+        <a href="https://www.mediafire.com/file/cjnq03bpt3lcqbl">
+            <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/17d8cfb86e6f1507ddc481fa370bae11.jpg" style="width: 105px; height: 150px; object-fit: cover;">
+            <p class="game-text">Zed Zone (410 mb)</p>
+        </a>
+      </div>
+        <div class="game-container">
+          <a href="https://www.mediafire.com/file/sztzwdkp7mndyry/The_Long_DriveBy_GAMER_YT.zip/file">
+              <img src="https://longdrivefree.com/images/uploads/2022-12-14/icon-gami5.png" style="width: 105px; height: 150px; object-fit: cover;">
+              <p class="game-text">The Long Drive (345 Mb)</p>
+          </a>
+        </div>
+          <div class="game-container">
+            <a href="https://www.mediafire.com/file/u74q2nsrm2n4v2f/Hitman_Codename_47_-_GOG.rar/file">
+                <img src="https://cdn2.steamgriddb.com/icon/4064e4d885e4be966c600e071394c636.png" style="width: 105px; height: 150px; object-fit: cover;">
+                <p class="game-text">Hitman Codename 47  (254 Mb)</p>
+            </a>
+         </div>
     </div> 
     <script>
       const homeBtn = document.getElementById("home-btn");
-      const gamesbtn = document.getElementById("games-btn");
+      const gamesBtn = document.getElementById("games-btn");
       const otherBtn = document.getElementById("other-btn");
+      const infoBtn = document.getElementById("info-btn");
       const homeContent = document.getElementById("home-content");
-      const gameslist = document.getElementById("games-list");
+      const gamesList = document.getElementById("games-list");
       const otherContent = document.getElementById("other-content");
+      const infoList = document.getElementById("info-list");
 
-homeBtn.addEventListener("click", () => {
-console.log("Botón Home presionado");
-homeContent.classList.add("active");
-gameslist.classList.remove("active");
-otherContent.classList.remove("active");
-});
+      function deactivateAllTabs() {
+        homeContent.classList.remove("active");
+        gamesList.classList.remove("active");
+        otherContent.classList.remove("active");
+        infoList.classList.remove("active");
+      }
 
-otherBtn.addEventListener("click", () => {
-console.log("Botón Otro presionado");
-homeContent.classList.remove("active");
-gameslist.classList.remove("active");
-otherContent.classList.add("active");
-});
+      homeBtn.addEventListener("click", () => {
+        console.log("Botón Home presionado");
+        deactivateAllTabs();
+        homeContent.classList.add("active");
+      });
 
-gamesbtn.addEventListener("click", () => {
-console.log("Botón Otro presionado");
-homeContent.classList.remove("active");
-gameslist.classList.add("active");
-otherContent.classList.remove("active");
-});
-const searchInput = document.getElementById("search-input");
-const searchBtn = document.getElementById("search-btn");
-const gameListItems = document.getElementsByClassName("game-item");
+      gamesBtn.addEventListener("click", () => {
+        console.log("Botón Juegos presionado");
+        deactivateAllTabs();
+        gamesList.classList.add("active");
+      });
 
-searchBtn.addEventListener("click", () => {
-  const searchTerm = searchInput.value.trim().toLowerCase();
+      otherBtn.addEventListener("click", () => {
+        console.log("Botón Otro presionado");
+        deactivateAllTabs();
+        otherContent.classList.add("active");
+      });
 
-  // Loop through all the game list items and hide/show them based on the search term
-  for (let i = 0; i < gameListItems.length; i++) {
-    const gameItem = gameListItems[i];
-    const gameTitle = gameItem.getElementsByTagName("h3")[0].innerText.toLowerCase();
-
-    if (gameTitle.includes(searchTerm)) {
-      gameItem.style.display = "block";
-    } else {
-      gameItem.style.display = "none";
-    }
-  }
-});
-</script>
+      infoBtn.addEventListener("click", () => {
+        console.log("Botón Informacion presionado");
+        deactivateAllTabs();
+        infoList.classList.add("active");
+      });
+    </script>
   </body>
 </html>
-
